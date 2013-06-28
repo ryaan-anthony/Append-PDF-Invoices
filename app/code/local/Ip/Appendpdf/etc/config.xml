@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Ip_Appendpdf>
+            <version>0.1.0</version>
+        </Ip_Appendpdf>
+    </modules>
+    <global>
+        <models>
+            <sales>
+                <rewrite>
+                    <order_pdf_invoice>Ip_Appendpdf_Model_Invoice</order_pdf_invoice>
+                </rewrite>
+            </sales>
+        </models>
+    </global>
+</config>
