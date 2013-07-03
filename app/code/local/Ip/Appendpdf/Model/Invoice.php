@@ -12,10 +12,12 @@ class Ip_Appendpdf_Model_Invoice extends Mage_Sales_Model_Order_Pdf_Invoice
      */
     protected function insertComments(&$page, $order)
     {
-        $part = "Customer Note: ".$order->getCustomerNote();
         $this->_setFontRegular($page, 10);
-        $page->drawText($part, 25, $this->y, 'UTF-8');
-        $this->y -= 50;
+        $part = "Customer Note: ".$order->getCustomerNote();
+        foreach(str_split($part, 120) as $part){
+            $page->drawText($part, 25, $this->y, 'UTF-8');
+            $this->y -= 12;
+        }
     }
 	
  	/**
